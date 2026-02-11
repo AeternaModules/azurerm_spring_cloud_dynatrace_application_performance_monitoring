@@ -23,7 +23,7 @@ EOT
     api_token               = optional(string)
     api_url                 = optional(string)
     environment_id          = optional(string)
-    globally_enabled        = optional(bool, false)
+    globally_enabled        = optional(bool) # Default: false
   }))
 }
 
