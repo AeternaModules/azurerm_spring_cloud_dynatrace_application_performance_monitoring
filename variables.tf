@@ -6,24 +6,36 @@ Required:
     - name
     - spring_cloud_service_id
     - tenant
+    - tenant_key_vault_id (alternative to tenant - read from Key Vault instead)
+    - tenant_key_vault_secret_name (alternative to tenant - read from Key Vault instead)
     - tenant_token
+    - tenant_token_key_vault_id (alternative to tenant_token - read from Key Vault instead)
+    - tenant_token_key_vault_secret_name (alternative to tenant_token - read from Key Vault instead)
 Optional:
     - api_token
+    - api_token_key_vault_id (alternative to api_token - read from Key Vault instead)
+    - api_token_key_vault_secret_name (alternative to api_token - read from Key Vault instead)
     - api_url
     - environment_id
     - globally_enabled
 EOT
 
   type = map(object({
-    connection_point        = string
-    name                    = string
-    spring_cloud_service_id = string
-    tenant                  = string
-    tenant_token            = string
-    api_token               = optional(string)
-    api_url                 = optional(string)
-    environment_id          = optional(string)
-    globally_enabled        = optional(bool) # Default: false
+    connection_point                   = string
+    name                               = string
+    spring_cloud_service_id            = string
+    tenant                             = string
+    tenant_key_vault_id                = optional(string)
+    tenant_key_vault_secret_name       = optional(string)
+    tenant_token                       = string
+    tenant_token_key_vault_id          = optional(string)
+    tenant_token_key_vault_secret_name = optional(string)
+    api_token                          = optional(string)
+    api_token_key_vault_id             = optional(string)
+    api_token_key_vault_secret_name    = optional(string)
+    api_url                            = optional(string)
+    environment_id                     = optional(string)
+    globally_enabled                   = optional(bool) # Default: false
   }))
 }
 
