@@ -6,11 +6,11 @@ Required:
     - name
     - spring_cloud_service_id
     - tenant
-    - tenant_key_vault_id (alternative to tenant - read from Key Vault instead)
-    - tenant_key_vault_secret_name (alternative to tenant - read from Key Vault instead)
+    - tenant_key_vault_id (optional, alternative to tenant)
+    - tenant_key_vault_secret_name (optional, alternative to tenant)
     - tenant_token
-    - tenant_token_key_vault_id (alternative to tenant_token - read from Key Vault instead)
-    - tenant_token_key_vault_secret_name (alternative to tenant_token - read from Key Vault instead)
+    - tenant_token_key_vault_id (optional, alternative to tenant_token)
+    - tenant_token_key_vault_secret_name (optional, alternative to tenant_token)
 Optional:
     - api_token
     - api_token_key_vault_id (alternative to api_token - read from Key Vault instead)
@@ -35,7 +35,7 @@ EOT
     api_token_key_vault_secret_name    = optional(string)
     api_url                            = optional(string)
     environment_id                     = optional(string)
-    globally_enabled                   = optional(bool) # Default: false
+    globally_enabled                   = optional(bool)
   }))
 }
 
